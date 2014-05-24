@@ -73,7 +73,6 @@ PROMPT  := "    ["$(COLOR_GREEN)" XEOS "$(COLOR_NONE)"]> ["$(COLOR_GREEN)" SRC  
 
 _FILES  = $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_OBJC))
 _FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_OBJC)message/)
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_OBJC)runtime/)
 
 #-------------------------------------------------------------------------------
 # Built-in targets
