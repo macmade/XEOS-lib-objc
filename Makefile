@@ -89,16 +89,16 @@ _FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_OBJC)runtime/)
 # Build the full project
 all: $(_FILES)
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libobjc.a"$(COLOR_NONE)
+	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_STATIC)"$(COLOR_NONE)
 	@$(call XEOS_FUNC_LIB_STATIC_32,libobjc,$^)
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libobjc.a"$(COLOR_NONE)
+	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_STATIC)"$(COLOR_NONE)
 	@$(call XEOS_FUNC_LIB_STATIC_64,libobjc,$^)
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libobjc.so"$(COLOR_NONE)
+	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_DYNAMIC)"$(COLOR_NONE)
 	@$(call XEOS_FUNC_LIB_DYNAMIC_32,libobjc,$^)
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libobjc.so"$(COLOR_NONE)
+	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_DYNAMIC)"$(COLOR_NONE)
 	@$(call XEOS_FUNC_LIB_DYNAMIC_64,libobjc,$^)
 
 # Cleans the build files
