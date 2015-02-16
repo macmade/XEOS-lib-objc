@@ -59,52 +59,17 @@
 
 # $Id$
 
-include ../../../Makefile-Config.mk
+include make/Config.mk
+include make/Targets.mk
 
-#-------------------------------------------------------------------------------
-# Display
-#-------------------------------------------------------------------------------
+PROMPT  := XEOS SOURCE LIB OBJC
+DEPS    := XEOS-lib-system
+FILES   := $(call XEOS_FUNC_C_FILES,$(DIR_SRC)message/)
 
-PROMPT  := "    ["$(COLOR_GREEN)" XEOS "$(COLOR_NONE)"]> ["$(COLOR_GREEN)" SRC  "$(COLOR_NONE)"]> ["$(COLOR_GREEN)" LIB  "$(COLOR_NONE)"]> ["$(COLOR_GREEN)" OBJC "$(COLOR_NONE)"]> *** "
-
-#-------------------------------------------------------------------------------
-# Files
-#-------------------------------------------------------------------------------
-
-_FILES  = $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_OBJC))
-_FILES += $(call XEOS_FUNC_C_OBJ,$(PATH_SRC_LIB_OBJC)message/)
-
-#-------------------------------------------------------------------------------
-# Built-in targets
-#-------------------------------------------------------------------------------
-
-# Declaration for phony targets, to avoid problems with local files
-.PHONY: all clean
-
-#-------------------------------------------------------------------------------
-# Phony targets
-#-------------------------------------------------------------------------------
-
-# Build the full project
-all: $(_FILES)
+all: obj-build
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_STATIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_STATIC_32,libobjc,$^)
+	@:
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the library archive"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_STATIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_STATIC_64,libobjc,$^)
+clean: obj-clean
 	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 32 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_DYNAMIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_DYNAMIC_32,libobjc,$^)
-	
-	@$(PRINT) $(PROMPT)$(COLOR_CYAN)"Generating the dynamic library"$(COLOR_NONE)" [ 64 bits ]: "$(COLOR_GRAY)"libobjc$(EXT_LIB_DYNAMIC)"$(COLOR_NONE)
-	@$(call XEOS_FUNC_LIB_DYNAMIC_64,libobjc,$^)
-
-# Cleans the build files
-clean:
-	
-	@$(PRINT) $(PROMPT)"Cleaning all build files"
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_32_OBJ)$(subst $(PATH_SRC),,$(PATH_SRC_LIB_OBJC))
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_64_OBJ)$(subst $(PATH_SRC),,$(PATH_SRC_LIB_OBJC))
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_32_BIN)libobjc.*
-	@$(RM) $(ARGS_RM) $(PATH_BUILD_64_BIN)libobjc.*
+	@:
