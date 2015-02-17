@@ -1,0 +1,158 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		055EB55E1A93AFC0009ACFEC /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		055EB55F1A93AFC0009ACFEC /* message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message.h; sourceTree = "<group>"; };
+		055EB5601A93AFC0009ACFEC /* objc-api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "objc-api.h"; sourceTree = "<group>"; };
+		055EB5611A93AFC0009ACFEC /* objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objc.h; sourceTree = "<group>"; };
+		055EB5621A93AFC0009ACFEC /* runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runtime.h; sourceTree = "<group>"; };
+		055EB5631A93AFC0009ACFEC /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		055EB5641A93AFC0009ACFEC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		055EB5671A93AFC0009ACFEC /* objc_msgSend.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objc_msgSend.c; sourceTree = "<group>"; };
+		055EB5681A93AFC0009ACFEC /* objc_msgSend_stret.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objc_msgSend_stret.c; sourceTree = "<group>"; };
+		055EB5691A93AFC0009ACFEC /* objc_msgSendSuper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objc_msgSendSuper.c; sourceTree = "<group>"; };
+		055EB56A1A93AFC0009ACFEC /* objc_msgSendSuper_stret.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objc_msgSendSuper_stret.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		055EB55B1A93AFC0009ACFEC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				055EB55C1A93AFC0009ACFEC /* objc */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		055EB55C1A93AFC0009ACFEC /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				055EB55D1A93AFC0009ACFEC /* __private */,
+				055EB55F1A93AFC0009ACFEC /* message.h */,
+				055EB5601A93AFC0009ACFEC /* objc-api.h */,
+				055EB5611A93AFC0009ACFEC /* objc.h */,
+				055EB5621A93AFC0009ACFEC /* runtime.h */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		055EB55D1A93AFC0009ACFEC /* __private */ = {
+			isa = PBXGroup;
+			children = (
+				055EB55E1A93AFC0009ACFEC /* types.h */,
+			);
+			path = __private;
+			sourceTree = "<group>";
+		};
+		055EB5651A93AFC0009ACFEC /* source */ = {
+			isa = PBXGroup;
+			children = (
+				055EB5661A93AFC0009ACFEC /* message */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		055EB5661A93AFC0009ACFEC /* message */ = {
+			isa = PBXGroup;
+			children = (
+				055EB5671A93AFC0009ACFEC /* objc_msgSend.c */,
+				055EB5681A93AFC0009ACFEC /* objc_msgSend_stret.c */,
+				055EB5691A93AFC0009ACFEC /* objc_msgSendSuper.c */,
+				055EB56A1A93AFC0009ACFEC /* objc_msgSendSuper_stret.c */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
+		0595BA7A17AC11A70021435A = {
+			isa = PBXGroup;
+			children = (
+				055EB55B1A93AFC0009ACFEC /* include */,
+				055EB5631A93AFC0009ACFEC /* Makefile */,
+				055EB5641A93AFC0009ACFEC /* README.md */,
+				055EB5651A93AFC0009ACFEC /* source */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		0595BA7F17AC11A70021435A /* XEOS-lib-objc */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 0595BA8217AC11A70021435A /* Build configuration list for PBXLegacyTarget "XEOS-lib-objc" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "XEOS-lib-objc";
+			passBuildSettingsInEnvironment = 1;
+			productName = "LIB-PTHREAD";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		0595BA7B17AC11A70021435A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "XS-Labs";
+			};
+			buildConfigurationList = 0595BA7E17AC11A70021435A /* Build configuration list for PBXProject "XEOS-lib-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0595BA7A17AC11A70021435A;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0595BA7F17AC11A70021435A /* XEOS-lib-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		0595BA8117AC11A70021435A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		0595BA8417AC11A70021435A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0595BA7E17AC11A70021435A /* Build configuration list for PBXProject "XEOS-lib-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0595BA8117AC11A70021435A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0595BA8217AC11A70021435A /* Build configuration list for PBXLegacyTarget "XEOS-lib-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0595BA8417AC11A70021435A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0595BA7B17AC11A70021435A /* Project object */;
+}
