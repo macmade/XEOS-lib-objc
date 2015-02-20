@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_OBJC_OBJC_H__
-#define __XEOS_LIB_OBJC_OBJC_H__
+#ifndef XEOS_LIB_OBJC_OBJC_H
+#define XEOS_LIB_OBJC_OBJC_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -113,16 +113,38 @@ typedef signed char BOOL;
 #endif
 
 #if !( defined( __OBJC_GC__ ) || __has_feature( objc_arc ) )
+    
+    #ifdef __clang__
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wreserved-id-macro"
+    #endif
+    
     #define __strong
+    
+    #ifdef __clang__
+    #pragma clang diagnostic pop
+    #endif
+    
 #endif
 
 #if !__has_feature( objc_arc )
+    
+    #ifdef __clang__
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wreserved-id-macro"
+    #endif
+    
     #define __unsafe_unretained
     #define __autoreleasing
+    
+    #ifdef __clang__
+    #pragma clang diagnostic pop
+    #endif
+    
 #endif
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __XEOS_LIB_OBJC_OBJC_H__ */
+#endif /* XEOS_LIB_OBJC_OBJC_H */

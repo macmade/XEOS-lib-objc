@@ -61,8 +61,8 @@
 
 /* $Id$ */
 
-#ifndef __XEOS_LIB_OBJC_MESSAGE_H__
-#define __XEOS_LIB_OBJC_MESSAGE_H__
+#ifndef XEOS_LIB_OBJC___PRIVATE_TYPES_H
+#define XEOS_LIB_OBJC___PRIVATE_TYPES_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -82,4 +82,4 @@ struct objc_selector
 }
 #endif
 
-#endif /* __XEOS_LIB_OBJC_MESSAGE_H__ */
+#endif /* XEOS_LIB_OBJC___PRIVATE_TYPES_H */
