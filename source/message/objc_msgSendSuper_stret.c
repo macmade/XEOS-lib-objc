@@ -59,8 +59,6 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  ******************************************************************************/
 
-/* $Id$ */
-
 #include <objc/message.h>
 
 void objc_msgSendSuper_stret( struct objc_super * super, SEL selector, ... )

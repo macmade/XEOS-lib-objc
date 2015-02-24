@@ -59,8 +59,6 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  ******************************************************************************/
 
-/* $Id$ */
-
 #include <objc/message.h>
 
 id objc_msgSend( id receiver, SEL selector, ... )
